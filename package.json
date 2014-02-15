@@ -1,0 +1,12 @@
+{
+	"name": "status-board-server",
+	"version": "0.0.1",
+	"dependencies": {
+		"jira": "0.8.2",
+		"express": "3.4.8",
+		"sickbeard": "0.0.2"
+	},
+	"commands": {
+		"start": "npm server.js"
+	}
+}
