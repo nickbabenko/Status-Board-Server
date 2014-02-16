@@ -12,19 +12,11 @@ module.exports = function() {
 			var response = {
 				graph: {
 					title: 'Issue Overview',
-					type: 'line',
+					type: 'bar',
 					datasequences: []
 				}	
 			};
-		
-			var response = {
-					graph: {
-						title: 'Issue Overview',
-						type: 'line',
-						datasequences: []
-					}	
-				},
-				subQueryDone	= 0;
+			var queryDone = 0;
 			
 			projects.forEach(function(project) {
 				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved)', {}, function(error, issues) {				
