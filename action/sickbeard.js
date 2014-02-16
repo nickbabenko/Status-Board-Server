@@ -21,17 +21,17 @@ module.exports = function() {
 				var response = '<table id="shows">';
 				
 				if(upcomingEpisodes.data.today.length > 0) {
-					response += '<tr colspan="2"><td>TONIGHT</td></tr>';
+					response += '<tr><td colspan="2">TONIGHT</td></tr>';
 					
 					upcomingEpisodes.data.today.forEach(function(upcomingEpisode) {
 						response += '<tr>';
 						response += '<td class="showName">' + upcomingEpisode.show_name + '</td>';
-						response += '<td class="showEpisode">' + upcomingEpisode.ep_name + ' - S' + (upcomingEpisode.season < 9 ? '0' : '') + upcomingEpisode.season + 'E' + (upcomingEpisode.episode < 9 ? '0' : '') + upcomingEpisode.episode + '</td>';
+						response += '<td class="showEpisode">S' + (upcomingEpisode.season < 9 ? '0' : '') + upcomingEpisode.season + 'E' + (upcomingEpisode.episode < 9 ? '0' : '') + upcomingEpisode.episode + '</td>';
 						response += '</tr>';
 					});
 				}
 				
-				response += '<tr colspan="2"><td>DOWNLOAD HISTORY</td></tr>';
+				response += '<tr><td colspan="2">DOWNLOAD HISTORY</td></tr>';
 				
 				pastEpisodes.data.forEach(function(pastEpisode) {
 					response += '<tr>';
