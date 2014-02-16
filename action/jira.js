@@ -32,7 +32,7 @@ module.exports = function() {
 					var openTickets = 0,
 						closedTickets = 0;
 												
-					issues.issues.forEach(function(issue) {
+					issues.issues.forEach(function(issue) {					
 						if(issue.fields.status.name == 'Resolved' || 
 						   issue.fields.status.name == 'Closed' ||
 						   issue.fields.status.name == 'Fixed')
@@ -44,8 +44,8 @@ module.exports = function() {
 					response.graph.datasequences.push({
 						title: project.name,
 						datapoints: [
-							{ title: "Complete", value: openTickets },
-							{ title: "Incomplete", value: closedTickets }
+							{ title: "Complete", value: closedTickets },
+							{ title: "Incomplete", value: openTickets }
 						]
 					});
 					
