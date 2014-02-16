@@ -19,7 +19,7 @@ module.exports = function() {
 			var subQueryDone = 0;
 			
 			projects.forEach(function(project) {
-				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved)', {}, function(error, issues) {				
+				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved, Fixed)', {}, function(error, issues) {				
 					if(error || typeof issues != 'object') {
 						subQueryDone++;
 						
@@ -30,7 +30,9 @@ module.exports = function() {
 						closedTickets = 0;
 												
 					issues.issues.forEach(function(issue) {
-						if(issue.fields.status.name == 'Resolved' || issue.fields.status.name == 'Closed')
+						if(issue.fields.status.name == 'Resolved' || 
+						   issue.fields.status.name == 'Closed' ||
+						   issue.fields.status.name == 'Fixed')
 							closedTickets++;
 						else
 							openTickets++;
