@@ -16,7 +16,7 @@ module.exports = function() {
 					datasequences: []
 				}	
 			};
-			var queryDone = 0;
+			var subQueryDone = 0;
 			
 			projects.forEach(function(project) {
 				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved)', {}, function(error, issues) {				
