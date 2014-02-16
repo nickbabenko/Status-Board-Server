@@ -19,7 +19,7 @@ module.exports = function() {
 			var subQueryDone = 0;
 			
 			projects.forEach(function(project) {
-				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved, Fixed)', {}, function(error, issues) {								
+				jira.searchJira('project = ' + project.key + ' AND status in (Open, "In Progress", Reopened, "To Do", Closed, Resolved)', {}, function(error, issues) {								
 					if(error || typeof issues != 'object') {
 						subQueryDone++;
 						
