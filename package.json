@@ -5,7 +5,10 @@
 		"jira": "0.8.2",
 		"express": "3.4.8",
 		"sickbeard": "0.0.2",
-		"bitbucket-api": "0.0.6"
+		"bitbucket-api": "0.0.6",
+		"cheerio": "0.13.1",
+		"parse-rss": "0.1.1",
+		"entities": "0.5.0"
 	},
 	"commands": {
 		"start": "npm server.js"
