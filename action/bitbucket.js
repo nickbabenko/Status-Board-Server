@@ -19,8 +19,8 @@ module.exports = function() {
 							
 				response += '<tr>';
 				response += '<td style="line-height: 50%;">';
-				response += 	'<span style="font-size: 12px;">' + description('a')[1].children[0].data + '&nbsp;&nbsp;&nbsp;&nbsp;' + description('a')[0].children[0].data + '</span>';
-				response += 	'<span style="font-size: 15px;">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</span>';
+				response += 	'<div style="font-size: 14px;">' + description('a')[1].children[0].data + '&nbsp;&nbsp;&nbsp;&nbsp;' + description('a')[0].children[0].data + '</div>';
+				response += 	'<div style="font-size: 18px;">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</div>';
 				response += '</td>';
 				response += '</tr>';
 			});
