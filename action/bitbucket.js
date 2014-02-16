@@ -18,9 +18,9 @@ module.exports = function() {
 					return;
 							
 				response += '<tr>';
-				response += '<td style="line-height: 50%;">';
-				response += 	'<div style="font-size: 14px;">' + description('a')[1].children[0].data + '&nbsp;&nbsp;&nbsp;&nbsp;' + description('a')[0].children[0].data + '</div>';
-				response += 	'<div style="font-size: 18px;">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</div>';
+				response += '<td style="line-height: 50%; padding: 5px 10px 3px 10px;">';
+				response += 	'<div style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">' + description('a')[1].children[0].data + '&nbsp;&nbsp;&nbsp;&nbsp;' + description('a')[0].children[0].data + '</div>';
+				response += 	'<div style="font-size: 20px;">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</div>';
 				response += '</td>';
 				response += '</tr>';
 			});
