@@ -18,7 +18,7 @@ module.exports = function() {
 				type: 'downloaded'
 			},
 			function(pastEpisodes) {
-				var response = '<table id="shows">';
+				var response = '<style type="text/css">tr td:last-child{ width:1%; white-space:nowrap; }</style><table id="shows">';
 				
 				if(upcomingEpisodes.data.today.length > 0) {
 					response += '<tr><td colspan="2" style="background: none;">TONIGHT</td></tr>';
