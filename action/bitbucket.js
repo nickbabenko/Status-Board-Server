@@ -18,9 +18,10 @@ module.exports = function() {
 					return;
 							
 				response += '<tr>';
-				response += '<td class="repo">' + description('a')[1].children[0].data + '</td>';
-				response += '<td class="user">' + description('a')[0].children[0].data + '</td>';
-				response += '<td class="commit">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</td>';
+				response += '<td style="line-height: 50%;">';
+				response += 	'<span style="font-size: 12px;">' + description('a')[1].children[0].data + '&nbsp;&nbsp;&nbsp;&nbsp;' + description('a')[0].children[0].data + '</span>';
+				response += 	'<span style="font-size: 15px;">' + description('p ul li')[0].children[0].data.split(' - ')[1] + '</span>';
+				response += '</td>';
 				response += '</tr>';
 			});
 			
